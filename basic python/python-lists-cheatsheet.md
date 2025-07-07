@@ -199,19 +199,118 @@ list("hello")         # ['h', 'e', 'l', 'l', 'o']
 ```python
 unique = list(set([1, 2, 2, 3, 3]))   # [1, 2, 3]
 ```
+## 🔁— Looping Through Lists
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+# Basic loop
+for fruit in fruits:
+    print(fruit)
+
+# With index
+for i in range(len(fruits)):
+    print(i, fruits[i])
+
+# Using enumerate
+for index, value in enumerate(fruits):
+    print(f"{index}: {value}")
+
+# Using list comprehension
+capitalized = [f.upper() for f in fruits]
+````
 
 ---
 
-## 📘 Practice Example
+## 🔢 Making Numerical Lists
 
 ```python
-nums = [1, 2, 3, 4, 5]
+# Generate numbers 0 through 9
+numbers = list(range(10))          # [0, 1, 2, ..., 9]
 
-squared_even = [x**2 for x in nums if x % 2 == 0]
-print(squared_even)  # [4, 16]
+# Squares of 1–5
+squares = [x**2 for x in range(1, 6)]  # [1, 4, 9, 16, 25]
+
+# Even numbers between 1 and 20
+evens = [x for x in range(1, 21) if x % 2 == 0]
 ```
 
 ---
+
+## ✂️ Working with Part of a List (Slicing)
+
+```python
+players = ['alice', 'bob', 'carol', 'dave', 'eric']
+
+# First 3 players
+print(players[0:3])     # ['alice', 'bob', 'carol']
+
+# Last 2 players
+print(players[-2:])     # ['dave', 'eric']
+
+# All but the first
+print(players[1:])      # ['bob', 'carol', 'dave', 'eric']
+
+# Copy the full list
+copy = players[:]
+
+# Loop through a slice
+for player in players[:3]:
+    print(player.title())
+```
+
+---
+
+## 🧵 Tuples (Immutable Lists)
+
+```python
+# Basic tuple
+dimensions = (800, 600)
+
+print(dimensions[0])   # 800
+
+# Cannot modify: dimensions[0] = 1024 ❌ (TypeError)
+
+# Reassign entire tuple
+dimensions = (1024, 768)
+
+# Single-item tuple (MUST have comma)
+one_item = (5,)       # Correct
+not_a_tuple = (5)     # Just an int
+```
+
+Use tuples for:
+
+* Fixed-size collections
+* Faster, safer alternatives to lists (immutable)
+
+---
+
+## 🎨 Styling Your Code (PEP 8 Tips)
+
+✅ Follow **Python style guide (PEP 8)** when using lists:
+
+```python
+# Good: concise, readable
+colors = ["red", "green", "blue"]
+
+# Better for long lists
+languages = [
+    "Python",
+    "JavaScript",
+    "C++",
+    "Go",
+    "Rust",
+]
+
+# Naming: use plural for list variables
+users = ["admin", "guest", "editor"]
+```
+
+🧠 Tip:
+
+* Avoid excessive nesting.
+* Stick to consistent spacing, indentation, and quote style (`'` or `"` — just be consistent).
 
 ## 📎 Reference
 
