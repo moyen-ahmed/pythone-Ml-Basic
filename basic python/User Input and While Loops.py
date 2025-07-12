@@ -31,8 +31,67 @@ while current_number <= 5:
 
 promt = "\nTell me something, and I will repeat it back to you."
 promt += "\nEnter 'quit' to end the program. "
-message = ""
+message = ""#  Initialize an empty string for the message
+#  The `input()` function can be used to get user input in a loop.
 while message != 'quit':
+    #  The loop continues until the user types 'quit'.
     message = input(promt)
     if message != 'quit':
         print(message)
+        
+ #Example 2
+current_number = 0
+while current_number < 10:
+    current_number += 1  # Increment the number by 1 each time through the loop
+    if current_number % 2 == 0:  # Check if the number is even
+        continue  # Skip the rest of the loop for even numbers
+    print(current_number)  # Print only odd numbers
+            
+            
+            
+            
+            
+#while loop with list and dictionary
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop()  # Remove the last user from the list
+    print(f"Verifying user: {current_user.title()}")
+    confirmed_users.append(current_user)  # Add the user to the confirmed list
+    
+    print(f"Confirmed users: {confirmed_users}")
+#  This code demonstrates how to take user input and use while loops in Python.
+    for user in confirmed_users:
+        print(f"User {user.title()} has been confirmed.")
+        
+        
+#Example 3: Removing all instances of a specific value from a list
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'dog']
+print("Original list of pets:", pets)
+#  This code demonstrates how to take user input and use while loops in Python.
+#  The `pop()` method removes the last item from a list and returns it.
+while 'dog' in pets:    
+    pets.remove('dog')  # Remove the first occurrence of 'dog' from the list
+print("Updated list of pets:", pets)
+
+        
+# Example 4: Filling a dictionary with user input
+responses = {}
+#  This code demonstrates how to take user input and use while loops in Python.
+polling_active = True
+while polling_active:   
+    name = input("\nWhat is your name? ")
+    response = input("Which mountain would you like to climb someday? ")
+    
+    # Store the response in the dictionary
+    responses[name] = response
+    
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat.lower() == 'no':
+        polling_active = False  # End the polling
+        
+# Display the results
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name.title()} would like to climb {response.title()}.")
+           
