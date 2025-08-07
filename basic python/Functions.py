@@ -57,3 +57,5 @@ while unprinted_designs:
 print("\nThe following models have been printed:")
 for completed_model in completed_models:
     print(completed_model)
+    #passing arbitary number of arguments
+    
