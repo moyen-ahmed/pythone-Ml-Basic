@@ -59,3 +59,8 @@ for completed_model in completed_models:
     print(completed_model)
     #passing arbitary number of arguments
     
+def make_pizza(*toppings):
+    """Print the list of toppings that have been requested."""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")   
