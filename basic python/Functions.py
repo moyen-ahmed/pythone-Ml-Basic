@@ -32,3 +32,28 @@ while True:
     l_name= input("Last name: ")
     formatted_name = get_formatted_name(f_name, l_name)
     print(f"\nHello, {formatted_name}!")
+    
+#passing  a list
+def greet_users(names):
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+
+user_names = ['hannah', 'ty', 'margot']
+greet_users(user_names) 
+
+
+#Example unprinted designs
+# This code simulates a 3D printing process where designs are printed one by one from a list of unprinted designs. Each design is printed and then moved to a list of completed models. Finally, it prints out all the completed models.
+
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print(f"Printing model: {current_design}.")
+    completed_models.append(current_design) 
+    
+print("\nThe following models have been printed:")
+for completed_model in completed_models:
+    print(completed_model)
