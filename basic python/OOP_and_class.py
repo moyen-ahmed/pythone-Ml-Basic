@@ -6,4 +6,4 @@ class Dog:
         self.age=age
         
 def sit(self):
-    print
+    print(f"{self.naem}is now s")
