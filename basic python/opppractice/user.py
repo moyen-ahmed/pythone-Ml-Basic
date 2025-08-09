@@ -11,8 +11,5 @@ def open_resturant(self):
 resturent=Resturent('KFC','Bangladesh')
 print(f"Resturent name:{resturent.restaurent_name}")
 print(f"Resturent cusine :{resturent.cuisine_type}")
-
-def open_resturantdef(self):
-    print(f"The resturent {self.restaurent_name}")
-    
-resturent=     
+resturent.describe_resturent()
+resturent.open_resturant()
