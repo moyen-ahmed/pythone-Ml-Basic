@@ -1,12 +1,9 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle   
-from pathlib import Path
 
 app = Flask(__name__)
-MODEL_PATH = Path(__file__).with_name("model.pkl")
-with MODEL_PATH.open("rb") as f:
-    model = pickle.load(f)
+model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -25,4 +22,3 @@ def predict():
     return render_template('index.html', prediction_text='Predicted Iris Species is: {}'.format(prediction))
 if __name__ == "__main__":
     app.run(debug=True)
-    
